@@ -1,0 +1,87 @@
+# Tea Supply Chain Management System Requirements
+
+## System Requirements
+- Node.js 16+
+- npm or yarn
+- Git
+- MetaMask wallet
+
+## Frontend Dependencies (React Web App)
+cd frontend
+npm install react@18
+npm install react-dom@18
+npm install react-router-dom@6
+npm install web3@4
+npm install ethers@6
+npm install @metamask/detect-provider
+npm install leaflet react-leaflet
+npm install recharts
+npm install qrcode.js
+npm install jsqr
+npm install socket.io-client
+npm install axios
+
+## Mobile App Dependencies (React Native)
+cd mobile-app
+npm install react-native@0.72
+npm install expo@49
+npm install @react-navigation/native@6
+npm install @react-navigation/stack@6
+npm install expo-camera
+npm install expo-location
+npm install expo-barcode-scanner
+npm install expo-notifications
+npm install @react-native-async-storage/async-storage
+
+## Smart Contract Dependencies
+cd contracts
+npm install @openzeppelin/contracts@4.9
+npm install hardhat
+npm install @nomiclabs/hardhat-ethers
+npm install @nomiclabs/hardhat-waffle
+
+## Development Dependencies
+npm install --save-dev @testing-library/react
+npm install --save-dev @testing-library/jest-dom
+npm install --save-dev eslint
+npm install --save-dev prettier
+
+## Setup Commands
+
+# 1. Clone and setup
+git clone <repository-url>
+cd tea2
+
+# 2. Frontend setup
+cd frontend
+npm install
+npm start
+
+# 3. Mobile app setup
+cd mobile-app
+npm install
+npx expo start
+
+# 4. Smart contract deployment (Remix IDE recommended)
+# Or using Hardhat:
+cd contracts
+npm install
+npx hardhat compile
+npx hardhat deploy --network sepolia
+
+## Build Commands
+
+# Frontend production build
+cd frontend
+npm run build
+
+# Mobile app builds
+cd mobile-app
+npx expo build:android
+npx expo build:ios
+
+## Environment Variables Required
+# Create .env in frontend directory:
+REACT_APP_CONTRACT_ADDRESS=0xYourContractAddress
+REACT_APP_NETWORK_ID=11155111
+REACT_APP_INFURA_PROJECT_ID=your_infura_id
